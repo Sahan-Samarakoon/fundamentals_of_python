@@ -6,11 +6,13 @@ def moon_weight():
     increment = int(sys.stdin.readline())
     print('Please enter the number of years')
     years = int(sys.stdin.readline())
-    for i in range(1, years + 1):
-        moon = earth_weight * 0.165
-        earth_weight = earth_weight + increment
-        print("Year %s:%s" % (i, moon))
-
+    if earth_weight > 0 and increment > 0 and years > 0:
+        for i in range(1, years + 1):
+            moon = earth_weight * 0.165
+            earth_weight = earth_weight + increment
+            print(f"Year {i}: {round(moon, 3)}")
+    else:
+        print('invalid input')
 moon_weight()
 
 
