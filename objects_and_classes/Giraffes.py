@@ -1,4 +1,4 @@
-class animals:
+class Animals:
     def breathe(self):
         print('breathing')
     def move(self):
