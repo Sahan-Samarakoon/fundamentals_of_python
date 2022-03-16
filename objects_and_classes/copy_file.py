@@ -1,0 +1,6 @@
+location = input('Enter file location:')
+test_file = open(location)
+text = test_file.read()
+test_file_1 = open('d:\\output.txt', 'w')
+test_file_1.write(text)
+test_file_1.close()
